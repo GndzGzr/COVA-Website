@@ -17,7 +17,7 @@ const Methodology = () => {
       </h2>
       <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {/* Dataset */}
-        <Link href="/methodology/dataset" className="group relative">
+        <Link href="/methodology#dataset" className="group relative">
           <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm border border-green-500/30 hover:border-green-500/50 transition-colors">
             <h3 className="text-2xl font-semibold text-green-400 mb-4">Dataset</h3>
             <p className="text-gray-300">
@@ -30,7 +30,7 @@ const Methodology = () => {
         </Link>
 
         {/* YOLO Detection */}
-        <Link href="/methodology/yolo-detection" className="group relative">
+        <Link href="/methodology#yolo-detection" className="group relative">
           <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm border border-yellow-500/30 hover:border-yellow-500/50 transition-colors">
             <h3 className="text-2xl font-semibold text-yellow-400 mb-4">YOLO Detection</h3>
             <p className="text-gray-300">
@@ -43,7 +43,7 @@ const Methodology = () => {
         </Link>
 
         {/* Algorithms */}
-        <Link href="/methodology/algorithms" className="group relative">
+        <Link href="/methodology#algorithms" className="group relative">
           <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm border border-blue-500/30 hover:border-blue-500/50 transition-colors">
             <h3 className="text-2xl font-semibold text-blue-400 mb-4">Advanced Algorithms</h3>
             <p className="text-gray-300">
@@ -56,7 +56,7 @@ const Methodology = () => {
         </Link>
 
         {/* Mobile App */}
-        <Link href="/methodology/mobile-app" className="group relative">
+        <Link href="/methodology#mobile-app" className="group relative">
           <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm border border-purple-500/30 hover:border-purple-500/50 transition-colors">
             <h3 className="text-2xl font-semibold text-purple-400 mb-4">Mobile Application</h3>
             <p className="text-gray-300">
@@ -69,7 +69,7 @@ const Methodology = () => {
         </Link>
 
         {/* VLM Integration */}
-        <Link href="/methodology/vlm" className="group relative">
+        <Link href="/methodology#vlm" className="group relative">
           <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm border border-pink-500/30 hover:border-pink-500/50 transition-colors">
             <h3 className="text-2xl font-semibold text-pink-400 mb-4">Vision-Language Models</h3>
             <p className="text-gray-300">
@@ -82,7 +82,7 @@ const Methodology = () => {
         </Link>
 
         {/* Cloud Deployment */}
-        <Link href="/methodology/cloud" className="group relative">
+        <Link href="/methodology#cloud" className="group relative">
           <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm border border-orange-500/30 hover:border-orange-500/50 transition-colors">
             <h3 className="text-2xl font-semibold text-orange-400 mb-4">Cloud Infrastructure</h3>
             <p className="text-gray-300">

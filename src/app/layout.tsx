@@ -1,5 +1,6 @@
+import './globals.css';
 import type { Metadata } from "next";
-import "./globals.css";
+import ClientLayout from './ClientLayout';
 
 export const metadata: Metadata = {
   title: "Beyond Vision",
@@ -19,7 +20,9 @@ export default function RootLayout({
         <link rel="preload" href="/font/HelveticaNeueMedium.otf" as="font" type="font/otf" crossOrigin="anonymous" />
       </head>
       <body className="font-['Helvetica_Neue'] antialiased">
-        {children}
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );

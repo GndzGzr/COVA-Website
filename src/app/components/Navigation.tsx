@@ -42,9 +42,9 @@ const Navigation = () => {
   ];
 
   const toolItems = [
-    { id: 'attention-tool', label: 'Attention' },
-    { id: 'apply-tool', label: 'Apply' },
-    { id: 'comunication-tool', label: 'Communication' },
+    { id: 'modules/attention', label: 'Attention' },
+    { id: 'modules/apply', label: 'Apply' },
+    { id: 'modules/communicate', label: 'Communication' },
   ];
 
   const isActive = (path: string) => pathname === `/${path}`;
@@ -142,15 +142,10 @@ const Navigation = () => {
                 href="/participants"
                 className={`text-base ${isActive('participants') ? activeGradientClass : inactiveClass}`}
               >
-                Participants
+                Team Members
               </Link>
               
-              <Link 
-                href="/contact"
-                className={`text-base ${isActive('contact') ? activeGradientClass : inactiveClass}`}
-              >
-                Contact
-              </Link>
+         
             </div>
           </div>
         </nav>

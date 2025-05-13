@@ -21,6 +21,7 @@ const config: Config = {
         'slideUp': 'slideUp 0.5s ease-in-out forwards',
         'slideDown': 'slideDown 0.5s ease-in-out forwards',
         'gradient': 'gradient 8s ease infinite',
+        'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -44,6 +45,10 @@ const config: Config = {
             'background-size': '200% 200%',
             'background-position': 'right center'
           },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
     },
