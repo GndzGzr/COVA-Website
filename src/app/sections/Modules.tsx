@@ -21,7 +21,7 @@ const Modules = () => {
       id: 'apply',
       title: 'Apply',
       gradientClass: 'bg-gradient-to-r from-blue-500 to-purple-500',
-      question: "What's written on this sign?",
+      question: 'What\'s written on this sign?',
       answer: 'Kredi kartından nakit avans çekme',
       image: '/images/atm-module.png'
     },
@@ -94,7 +94,7 @@ const Modules = () => {
                         </p>
                         
                         <p className="text-xl text-gray-400 font-medium leading-relaxed italic">
-                          "{module.answer}"
+                          &quot;{module.answer}&quot;
                         </p>
                       </div>
 

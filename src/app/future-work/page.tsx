@@ -40,7 +40,7 @@ export default function FutureWork() {
                   Current Impact
                 </h2>
                 <p className="text-gray-200">
-                  What we developed in this project could actually change how visually impaired individuals interact with the world around them, especially in two specific and often challenging areas: using ATMs and navigating complex environments like campuses. Instead of needing outside help for basic but critical tasks like withdrawing money or walking across campus safely, our system gives them a real chance at doing it all by themselves. That's a pretty big deal.
+                  What we developed in this project could actually change how visually impaired individuals interact with the world around them, especially in two specific and often challenging areas: using ATMs and navigating complex environments like campuses. Instead of needing outside help for basic but critical tasks like withdrawing money or walking across campus safely, our system gives them a real chance at doing it all by themselves. That&apos;s a pretty big deal.
                 </p>
               </div>
 
@@ -67,7 +67,7 @@ export default function FutureWork() {
                   Technical Opportunities
                 </h2>
                 <p className="text-gray-200">
-                  Looking ahead, there's a lot more that can be done. More data would make the models more accurate, especially in new or changing environments. And using faster, more lightweight AI models would make this easier to run on smaller devices, like smartphones or even smart glasses. That's a big opportunity.
+                  Looking ahead, there&apos;s a lot more that can be done. More data would make the models more accurate, especially in new or changing environments. And using faster, more lightweight AI models would make this easier to run on smaller devices, like smartphones or even smart glasses. That&apos;s a big opportunity.
                 </p>
               </div>
 
@@ -76,13 +76,13 @@ export default function FutureWork() {
                   User-Centered Development
                 </h2>
                 <p className="text-gray-200">
-                  There's also the human side. If we had more feedback from visually impaired users themselves, we could make the system even more user-friendly. Maybe even test it in real-world places like a bank or a school and see how well it holds up.
+                  There&apos;s also the human side. If we had more feedback from visually impaired users themselves, we could make the system even more user-friendly. Maybe even test it in real-world places like a bank or a school and see how well it holds up.
                 </p>
               </div>
 
               <div className="mt-8 p-6 border-t border-white/20">
                 <p className="text-gray-200 italic text-center">
-                  In short, while this is just a concept for now, it shows real promise. With more time and support, we believe this could grow into something powerful, something that genuinely improves people's lives.
+                  In short, while this is just a concept for now, it shows real promise. With more time and support, we believe this could grow into something powerful, something that genuinely improves people&apos;s lives.
                 </p>
               </div>
             </div>

@@ -44,7 +44,7 @@ export default function Home() {
       const delta = e.deltaY;
       const direction = delta > 0 ? 'down' : 'up';
       const sections = Array.from(document.querySelectorAll('section'));
-      let currentSectionIndex = sections.findIndex((section) => {
+      const currentSectionIndex = sections.findIndex((section) => {
         const rect = section.getBoundingClientRect();
         return rect.top >= -100 && rect.top <= 100;
       });

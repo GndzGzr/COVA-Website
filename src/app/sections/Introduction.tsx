@@ -13,9 +13,9 @@ const Introduction = () => {
           <p className="text-lg text-gray-300 leading-relaxed">
             Today, over 285 million people worldwide live with visual impairments—39 million of them are completely blind <Link href="https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment" className="text-pink-500 hover:text-white transition-colors pt-4">World Health Organization</Link>. In busy, complex spaces like university campuses, visually impaired students often struggle with navigation, spatial awareness, and using everyday services like ATMs.
 
-            While assistive technology has come a long way, traditional tools often fall short in adapting to real-world environments. That's where AI and Vision-Language Models (VLMs) step in—offering the ability to understand both images and language for smarter, more responsive assistance.
+            While assistive technology has come a long way, traditional tools often fall short in adapting to real-world environments. That&apos;s where AI and Vision-Language Models (VLMs) step in—offering the ability to understand both images and language for smarter, more responsive assistance.
 
-            At <span className="text-purple-500">Beyond Vision</span>, we're building modular, AI-powered systems that help visually impaired individuals navigate safely, interact independently, and access information in real time—bringing us closer to a more inclusive and accessible world.
+            At <span className="text-purple-500">Beyond Vision</span>, we&apos;re building modular, AI-powered systems that help visually impaired individuals navigate safely, interact independently, and access information in real time—bringing us closer to a more inclusive and accessible world.
           
           
           </p>

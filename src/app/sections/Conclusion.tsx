@@ -19,7 +19,7 @@ const Conclusion = () => {
             <p className="text-gray-300 leading-relaxed">
               Our project represents a transformative approach to how visually impaired individuals interact with their environment, 
               particularly focusing on two critical areas: ATM usage and campus navigation. By enabling independent access to these 
-              essential services, we're taking significant steps toward greater autonomy.
+              essential services, we&apos;re taking significant steps toward greater autonomy.
             </p>
             <LightBulbIcon className="w-6 h-6 text-blue-400 absolute bottom-4 right-4 transform transition-transform group-hover:scale-125 group-hover:rotate-12" />
           </div>

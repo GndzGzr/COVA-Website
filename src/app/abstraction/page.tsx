@@ -36,7 +36,7 @@ export default function Abstraction() {
             
             <div className="space-y-8 text-lg leading-relaxed">
               <p className="text-gray-200">
-                This project focuses on increasing visually impaired students' quality of life in two aspects: helping them navigate their campus safely and independently, and helping them complete their ATM operations without outside help. The field of assistive technology is developing rapidly however due to poor real-world performance and reliability concerns systems and projects integrating Visual-Language Models (VLMs) are limited. This project addresses these concerns and aim to prove that a system which is using VLMs to detect the worlds around users and give them reliable feedback.
+                This project focuses on increasing visually impaired students&apos; quality of life in two aspects: helping them navigate their campus safely and independently, and helping them complete their ATM operations without outside help. The field of assistive technology is developing rapidly however due to poor real-world performance and reliability concerns systems and projects integrating Visual-Language Models (VLMs) are limited. This project addresses these concerns and aim to prove that a system which is using VLMs to detect the worlds around users and give them reliable feedback.
               </p>
 
               <p className="text-gray-200">
@@ -48,7 +48,7 @@ export default function Abstraction() {
                   ATM Module
                 </h2>
                 <p className="text-amber-100">
-                  Within the ATM module, users can interact with the ATM interface by moving their finger across the screen while receiving feedback from a trained model that detects finger position. We employed the YOLOv8 model both to detect the user's finger and to identify buttons on the ATM screen. Text on the screen is detected using EasyOCR. This setup provides an environment where users can independently complete ATM transactions without external assistance.
+                  Within the ATM module, users can interact with the ATM interface by moving their finger across the screen while receiving feedback from a trained model that detects finger position. We employed the YOLOv8 model both to detect the user&apos;s finger and to identify buttons on the ATM screen. Text on the screen is detected using EasyOCR. This setup provides an environment where users can independently complete ATM transactions without external assistance.
                 </p>
               </div>
 
@@ -57,7 +57,7 @@ export default function Abstraction() {
                   Campus Navigation Module
                 </h2>
                 <p className="text-orange-100">
-                  In the Campus Navigation module, we again utilized the YOLOv8 model, training it with data collected from our campus to classify various obstacles. A dataset of 4,202 images was used to improve the model's accuracy. Furthermore, we developed a mechanism to alert users in real time based on the location and proximity of potential hazards in the environment.
+                  In the Campus Navigation module, we again utilized the YOLOv8 model, training it with data collected from our campus to classify various obstacles. A dataset of 4,202 images was used to improve the model&apos;s accuracy. Furthermore, we developed a mechanism to alert users in real time based on the location and proximity of potential hazards in the environment.
                 </p>
               </div>
 
@@ -66,7 +66,7 @@ export default function Abstraction() {
                   Vision-Language Model (VLM) Module
                 </h2>
                 <p className="text-rose-100">
-                  In the Vision-Language Model (VLM) module, users can ask context-aware questions about their surroundings, such as "What is in front of me?" or "Describe this scene," using voice commands. The module processes the visual input alongside the spoken query to generate informative, natural language responses. This functionality was evaluated using several state-of-the-art VLMs, including CogVLM and BLIP-2, both known for their visual reasoning capabilities. Additionally, we tested LLaVA (Large Language and Vision Assistant) for its fine-grained scene understanding and ChatGPT with vision support for its general-purpose reasoning and accessibility features. These models were assessed based on their response relevance, coherence, and latency, ensuring that the module can assist users effectively in dynamic environments through multimodal interaction.
+                  In the Vision-Language Model (VLM) module, users can ask context-aware questions about their surroundings, such as &quot;What is in front of me?&quot; or &quot;Describe this scene,&quot; using voice commands. The module processes the visual input alongside the spoken query to generate informative, natural language responses. This functionality was evaluated using several state-of-the-art VLMs, including CogVLM and BLIP-2, both known for their visual reasoning capabilities. Additionally, we tested LLaVA (Large Language and Vision Assistant) for its fine-grained scene understanding and ChatGPT with vision support for its general-purpose reasoning and accessibility features. These models were assessed based on their response relevance, coherence, and latency, ensuring that the module can assist users effectively in dynamic environments through multimodal interaction.
                 </p>
               </div>
 
