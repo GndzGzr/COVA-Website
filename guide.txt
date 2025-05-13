@@ -1,0 +1,94 @@
+General Properties:
+Every section consist of a screen size, every scroll leads to next section.
+Main Section is Hero when user first open website and Project Overview,
+Header section is, consist of centered navigations including {Main Page, Abstract, Introduction, Methodology, Results, Participants, Modules{including: Attention, Apply, Communicate}}
+
+Main Page (Overview):
+"A big font typed: Campus Oriented smart visual assistance for visually impaired, below left hacettepe logo, in below right our logo.
+Abstract of the Project:
+Explain the whole project shortly including the introduction of the field, the problem statement, your proposed solution and the methods you applied, your results and their discussion, expected impact and possible future directions. The abstract should be between 250-500 words.
+Introduction, Problem Definition & Literature Review:
+Introduce the field of your project, define your problem (as clearly as possible), review the literature (cite the papers) by explaining the proposed solutions to this problem together with limitations of these problems, lastly write your hypothesis (or research question) and summarize your proposed solution in a paragraph. Please use a scientific language (you may assume the style from the studies you cited in your literature review). You may borrow parts from your previous reports but update them with the information you obtained during the course of the project. This section should be between 750-1500 words.
+Methodology:
+Explain the methodology you followed throughout the project in technical terms including datasets, data pre-processing and featurization (if relevant), computational models/algorithms you used or developed, system training/testing (if relevant), principles of model evaluation (not the results). Using equations, flow charts, etc. are encouraged. Use sub-headings for each topic. Please use a scientific language. You may borrow parts from your previous reports but update them with the information you obtained during the course of the project. This section should be between 1000-1500 words (add pages if necessary).
+Results & Discussion:
+Explain your results in detail including system/model train/validation/optimization analysis, performance evaluation and comparison with the state-of-the-art (if relevant), ablation study (if relevant), a use-case analysis or the demo of the product (if relevant), and additional points related to your project. Also include the discussion of each piece of result (i.e., what would be the reason behind obtaining this outcome, what is the meaning of this result, etc.). Include figures and tables to summarize quantitative results. Use sub-headings for each topic. This section should be between 1000-2000 words (add pages if necessary).
+The Impact and Future Directions:
+Explain the potential (or current if exist) impacts of your outcome in terms of how the methods and results will be used in real life, how it will change an existing process, or where it will be published, etc. Also, explain what would be the next step if the project is continued in the future, what kind of qualitative and/or quantitative updates can be made, shorty, where this project can go from here? This section should be between 250-500 words
+Participants:
+Our team and advisor.
+Related Literature:
+
+
+Design:
+
+Design a minimalist, accessible website for a university project that offers a mobile visual assistant for blind individuals. The website should be clean, monochrome or soft-toned, and focused on clarity, usability, and symbolism. Avoid visual clutter and prioritize meaningful white space.
+
+1. Color Palette
+Background: Pure white #FFFFFF or soft dark #121212
+
+Text: Near-black #111111 or soft gray #EAEAEA (for dark mode)
+
+Accent: Single color only (optional, e.g., royal blue #3B82F6 or tech green #10B981)
+
+Keep contrast high for readability.
+
+🔤 2. Typography
+Use only 1–2 font families:
+
+Headers: Poppins, Inter, or Space Grotesk (bold, geometric)
+
+Body: Roboto, Open Sans, or IBM Plex Sans
+
+Stick to 3 text sizes:
+
+Large header (e.g. 40–48px)
+
+Section title (e.g. 24–28px)
+
+Body text (e.g. 16–18px)
+
+🔲 3. Layout
+One-column layout with centered or left-aligned content
+
+Use large spacing (2–4rem) between sections
+
+Sticky top navbar with anchor links:
+
+Home · About · Technology · Demo · Contact
+
+Avoid sidebars, cards, and overlays unless absolutely necessary
+
+📐 4. Components & Visuals
+Simple line icons (e.g. Lucide, Feather Icons)
+
+SVG illustrations or 1–2 meaningful images only (e.g. eye graphic, phone with app)
+
+Animate only when it adds value (fade-in, scroll reveal)
+
+If including Braille: use a subtle dotted SVG or texture
+
+🦯 5. Accessibility
+Full keyboard navigation
+
+Semantic HTML (<main>, <section>, <nav>, <button>)
+
+Alt text for all visuals
+
+Color contrast ratio: WCAG AA+
+
+Screen reader-friendly
+
+🔍 6. Content Structure
+Hero section: Project Name + Motto ("Vision beyond sight.")
+
+Intro: 1-paragraph description
+
+Features: 3 use cases with icons/text
+
+How it works: Small visual or app workflow
+
+Team or background: Brief credits
+
+Contact / GitHub / Demo links
+
