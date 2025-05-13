@@ -7,8 +7,7 @@ const SectionContainer = ({ children, className = "" }: SectionContainerProps) =
   return (
     <section 
       className={`
-        relative z-10 
-        bg-black/80 
+        relative z-20 
         min-h-screen 
         w-full 
         flex 

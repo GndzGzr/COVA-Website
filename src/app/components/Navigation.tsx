@@ -1,10 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const Navigation = () => {
-  const [currentPage, setCurrentPage] = useState('overview');
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
 
   const activeGradientClass = "bg-gradient-to-r from-amber-500 via-orange-400 via-30% via-red-400 via-60% via-rose-300 via-80% to-orange-200 text-transparent bg-clip-text font-medium";
   const inactiveClass = "text-gray-400 hover:text-white";
@@ -30,12 +32,12 @@ const Navigation = () => {
   }, [lastScrollY]);
 
   const reportItems = [
-    { id: 'pages/abstraction', label: 'Abstract' },
-    { id: 'pages/introduction', label: 'Introduction' },
-    { id: 'pages/methodology', label: 'Methodology' },
-    { id: 'pages/results', label: 'Results' },
-    { id: 'pages/related-work', label: 'Related Work' },
-    { id: 'pages/conclusion', label: 'Conclusion' },
+    { id: 'abstraction', label: 'Abstract' },
+    { id: 'introduction', label: 'Introduction' },
+    { id: 'methodology', label: 'Methodology' },
+    { id: 'results', label: 'Results' },
+    { id: 'related-work', label: 'Related Work' },
+    { id: 'conclusion', label: 'Conclusion' },
     { id: 'future-work', label: 'Future Work' },
   ];
 
@@ -45,39 +47,34 @@ const Navigation = () => {
     { id: 'comunication-tool', label: 'Communication' },
   ];
 
+  const isActive = (path: string) => pathname === `/${path}`;
+  const isReportActive = () => reportItems.some(item => isActive(item.id));
+  const isToolActive = () => toolItems.some(item => isActive(item.id));
+
   return (
     <div className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="mx-auto max-w-fit mt-4">
         <nav className="bg-black/20 backdrop-blur-sm rounded-full px-6">
           <div className="flex items-center h-12">
             <div className="flex items-center space-x-8">
-              <a 
-                href="/" 
-                onClick={() => setCurrentPage('overview')}
-                className={`text-base ${
-                  currentPage === 'overview' 
-                  ? activeGradientClass
-                  : inactiveClass
-                }`}
+              <Link 
+                href="/"
+                className={`text-base ${pathname === '/' ? activeGradientClass : inactiveClass}`}
               >
                 Project Overview
-              </a>
+              </Link>
 
               {/* Report Dropdown */}
               <div className="relative group">
                 <button
                   className={`text-base flex items-center space-x-1 ${
-                    reportItems.some(item => currentPage === item.id)
-                    ? activeGradientClass
-                    : inactiveClass
+                    isReportActive() ? activeGradientClass : inactiveClass
                   }`}
                 >
                   <span>Report</span>
                   <svg
                     className={`w-4 h-4 transition-transform group-hover:rotate-180 ${
-                      reportItems.some(item => currentPage === item.id)
-                      ? 'stroke-red-500'
-                      : 'stroke-current'
+                      isReportActive() ? 'stroke-red-500' : 'stroke-current'
                     }`}
                     fill="none"
                     viewBox="0 0 24 24"
@@ -88,20 +85,17 @@ const Navigation = () => {
 
                 {/* Dropdown Menu */}
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="bg-black/20 backdrop-blur-sm min-w-[180px] border border-white/10">
+                  <div className="bg-black/20 backdrop-blur-sm min-w-[180px] border border-white/10 rounded-lg">
                     {reportItems.map((item) => (
-                      <a
+                      <Link
                         key={item.id}
-                        href={`#${item.id}`}
-                        onClick={() => setCurrentPage(item.id)}
+                        href={`/${item.id}`}
                         className={`block px-4 py-2 text-base transition-colors ${
-                          currentPage === item.id
-                          ? activeGradientClass
-                          : inactiveClass
+                          isActive(item.id) ? activeGradientClass : inactiveClass
                         }`}
                       >
                         {item.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -111,17 +105,13 @@ const Navigation = () => {
               <div className="relative group">
                 <button
                   className={`text-base flex items-center space-x-1 ${
-                    toolItems.some(item => currentPage === item.id)
-                    ? activeGradientClass
-                    : inactiveClass
+                    isToolActive() ? activeGradientClass : inactiveClass
                   }`}
                 >
                   <span>Modules</span>
                   <svg
                     className={`w-4 h-4 transition-transform group-hover:rotate-180 ${
-                      toolItems.some(item => currentPage === item.id)
-                      ? 'stroke-red-500'
-                      : 'stroke-current'
+                      isToolActive() ? 'stroke-red-500' : 'stroke-current'
                     }`}
                     fill="none"
                     viewBox="0 0 24 24"
@@ -132,48 +122,35 @@ const Navigation = () => {
 
                 {/* Dropdown Menu */}
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="bg-black/20 backdrop-blur-sm min-w-[180px] border border-white/10">
+                  <div className="bg-black/20 backdrop-blur-sm min-w-[180px] border border-white/10 rounded-lg">
                     {toolItems.map((item) => (
-                      <a
+                      <Link
                         key={item.id}
-                        href={`#${item.id}`}
-                        onClick={() => setCurrentPage(item.id)}
+                        href={`/${item.id}`}
                         className={`block px-4 py-2 text-base transition-colors ${
-                          currentPage === item.id
-                          ? activeGradientClass
-                          : inactiveClass
+                          isActive(item.id) ? activeGradientClass : inactiveClass
                         }`}
                       >
                         {item.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
 
-              <a 
-                href="#" 
-                onClick={() => setCurrentPage('participants')}
-                className={`text-base ${
-                  currentPage === 'participants' 
-                  ? activeGradientClass
-                  : inactiveClass
-                }`}
+              <Link 
+                href="/participants"
+                className={`text-base ${isActive('participants') ? activeGradientClass : inactiveClass}`}
               >
                 Participants
-              </a>
+              </Link>
               
-              <a 
-                href="#" 
-                onClick={() => setCurrentPage('contact')}
-                className={`text-base ${
-                  currentPage === 'contact' 
-                  ? activeGradientClass
-                  : inactiveClass
-                }`}
+              <Link 
+                href="/contact"
+                className={`text-base ${isActive('contact') ? activeGradientClass : inactiveClass}`}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         </nav>

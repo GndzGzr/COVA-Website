@@ -1,82 +1,124 @@
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import SectionContainer from "../components/SectionContainer";
+import { useState } from 'react';
 
 const Modules = () => {
+  const router = useRouter();
+  const [activeModule, setActiveModule] = useState<string | null>(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const modules = [
+    {
+      id: 'attention',
+      title: 'Attention',
+      gradientClass: 'bg-gradient-to-r from-red-500 to-pink-500',
+      question: 'Warn me if any obstacle is front of me.',
+      answer: 'Stop! There is a person in front of you in one and half meter, you can turn right or left',
+      image: '/images/IMG_1106.JPEG'
+    },
+    {
+      id: 'apply',
+      title: 'Apply',
+      gradientClass: 'bg-gradient-to-r from-blue-500 to-purple-500',
+      question: "What's written on this sign?",
+      answer: 'Kredi kartından nakit avans çekme',
+      image: '/images/atm-module.png'
+    },
+    {
+      id: 'communicate',
+      title: 'Communicate',
+      gradientClass: 'bg-gradient-to-r from-green-500 to-teal-500',
+      question: 'Describe the environment',
+      answer: "The image features a small stone trash can, located on a sidewalk. The trash can is red in color, placed next to a tree. There are several cigarettes scattered around the trash can, and a couple of them are also near the tree. Additionally, there is a fire hydrant in the scene, located further away from the trash can.",
+      image: '/images/IMG_1680.JPEG'
+    }
+  ];
+
+  const handleModuleClick = (moduleId: string) => {
+    router.push(`/modules/${moduleId.toLowerCase()}`);
+  };
+
+  const handleModuleHover = (moduleId: string) => {
+    if (moduleId !== activeModule) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveModule(moduleId);
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 150);
+      }, 150);
+    }
+  };
+
   return (
     <SectionContainer>
-      <h2 className="text-4xl font-bold text-white mb-12 text-center">
+      <h2 className="text-4xl font-bold text-white mb-2 text-center">
         Core Modules
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-        {/* Attention Module */}
-        <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-blue-500/30 hover:border-blue-500/50 transition-colors">
-          <div className="aspect-square relative mb-6 overflow-hidden rounded-lg">
-            <Image
-              src="/images/attention-example.jpg"
-              alt="Attention module example"
-              fill
-              className="object-cover"
-            />
+      <div className="max-w-7xl mx-auto px-8 min-h-[500px] flex items-center">
+        <div className="flex gap-12 w-full">
+          {/* Left side - Module titles */}
+          <div className="w-1/5 flex flex-col gap-8 justify-center">
+            {modules.map((module) => (
+              <div
+                key={module.id}
+                className={`cursor-pointer transition-all duration-300 transform group ${
+                  activeModule === module.id ? 'scale-105' : 'hover:scale-105'
+                }`}
+                onMouseEnter={() => handleModuleHover(module.id)}
+                onClick={() => handleModuleClick(module.id)}
+              >
+                <h3 className={`text-4xl font-bold ${module.gradientClass} bg-clip-text text-transparent relative`}>
+                  {module.title}
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-current transition-all duration-300 opacity-0 group-hover:w-full group-hover:opacity-100" />
+                </h3>
+              </div>
+            ))}
           </div>
-          <h3 className="text-2xl font-semibold text-blue-400 mb-4 flex items-center">
-            <span className="mr-2">Attention</span>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
-          </h3>
-          <p className="text-gray-300">
-            Detects and announces obstacles or objects (like stairs, doors, people) in real-time. 
-            Provides immediate awareness of surroundings through continuous environmental scanning 
-            and object recognition.
-          </p>
-        </div>
 
-        {/* Apply Module */}
-        <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-purple-500/30 hover:border-purple-500/50 transition-colors">
-          <div className="aspect-square relative mb-6 overflow-hidden rounded-lg">
-            <Image
-              src="/images/apply-example.jpg"
-              alt="Apply module example"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <h3 className="text-2xl font-semibold text-purple-400 mb-4 flex items-center">
-            <span className="mr-2">Apply</span>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-          </h3>
-          <p className="text-gray-300">
-            Understands structured scenes (like signs, devices) and allows the user to ask: 
-            "What's on this screen?" Processes and interprets complex visual information, 
-            making it accessible through detailed verbal descriptions.
-          </p>
-        </div>
+          {/* Vertical Line */}
+          <div className="w-[2px] bg-gradient-to-b from-gray-500 via-white to-gray-500 self-stretch mx-4 opacity-20" />
 
-        {/* Communicate Module */}
-        <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-pink-500/30 hover:border-pink-500/50 transition-colors">
-          <div className="aspect-square relative mb-6 overflow-hidden rounded-lg">
-            <Image
-              src="/images/communicate-example.jpg"
-              alt="Communicate module example"
-              fill
-              className="object-cover"
-            />
+          {/* Right side - Content */}
+          <div className="flex-1 flex items-center">
+            {activeModule && (
+              <div className={`w-full transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
+                {modules.map((module) => (
+                  module.id === activeModule && (
+                    <div key={module.id} className="flex items-center pr-4">
+                      <div className="flex-1 space-y-8 mr-12">
+                        <p className="text-2xl font-semibold text-white leading-relaxed">
+                          Q: {module.question}
+                        </p>
+                        
+                        <p className="text-xl text-gray-400 font-medium leading-relaxed italic">
+                          "{module.answer}"
+                        </p>
+                      </div>
+
+                      <div className="w-[450px] h-[400px] relative rounded-lg overflow-hidden flex-shrink-0">
+                        <Image
+                          src={module.image}
+                          alt={`${module.title} example`}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 450px) 100vw, 450px"
+                        />
+                      </div>
+                    </div>
+                  )
+                ))}
+              </div>
+            )}
+            
+            {!activeModule && (
+              <div className="w-full text-center text-gray-400">
+                Hover over a module to see its details
+              </div>
+            )}
           </div>
-          <h3 className="text-2xl font-semibold text-pink-400 mb-4 flex items-center">
-            <span className="mr-2">Communicate</span>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-            </svg>
-          </h3>
-          <p className="text-gray-300">
-            Engages in natural voice conversations for tasks, directions, or information. 
-            Provides intuitive dialogue interface for users to interact with the system 
-            and receive clear, context-aware responses.
-          </p>
         </div>
       </div>
     </SectionContainer>
