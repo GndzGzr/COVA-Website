@@ -8,16 +8,16 @@ const IntroductionPage = () => {
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-16 px-2 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 bg-clip-text text-transparent animate-gradient">
             Beyond Vision: AI-Powered Assistance for Visual Impairment
           </h1>
 
           {/* Overview Section */}
-          <section className="mb-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="prose prose-invert max-w-none">
+          <section className="mb-20 px-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="prose prose-invert max-w-none text-justify px-2">
                 <p className="text-lg sm:text-xl leading-relaxed mb-8 text-gray-200">
                   Assistive technology has witnessed significant evolution in recent decades, particularly with the advancement of artificial intelligence and multimodal machine learning. Among these, Vision-Language Models (VLMs) have emerged as promising tools that combine visual and linguistic understanding to facilitate human-computer interaction.
                 </p>
@@ -44,15 +44,15 @@ const IntroductionPage = () => {
 
           {/* Problem Definition Section */}
           <section className="mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-10 px-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Problem Definition
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+                <h3 className="text-2xl font-semibold mb-6 px-1 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                   Campus Navigation Difficulties
                 </h3>
-                <ul className="list-none space-y-4 text-gray-300">
+                <ul className="list-none space-y-4 text-gray-300 px-2">
                   <li className="flex items-center space-x-3">
                     <span className="text-pink-400">•</span>
                     <span>Dynamic obstacle avoidance</span>
@@ -71,11 +71,11 @@ const IntroductionPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+                <h3 className="text-2xl font-semibold mb-6 px-1 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                   ATM Accessibility Limitations
                 </h3>
-                <ul className="list-none space-y-4 text-gray-300">
+                <ul className="list-none space-y-4 text-gray-300 px-2">
                   <li className="flex items-center space-x-3">
                     <span className="text-pink-400">•</span>
                     <span>Inability to interpret on-screen content without external help</span>
@@ -99,16 +99,16 @@ const IntroductionPage = () => {
 
           {/* Literature Review Section */}
           <section className="mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-10 px-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Literature Review
             </h2>
             <div className="space-y-8">
               {/* VLMs Section */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+                <h3 className="text-2xl font-semibold mb-6 px-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                   Vision-Language Models (VLMs) in Assistive Applications
                 </h3>
-                <div className="space-y-6 text-gray-300 leading-relaxed">
+                <div className="space-y-6 text-gray-300 leading-relaxed text-justify">
                   <p>
                     VLMs have demonstrated potential in enhancing accessibility by enabling machines to interpret visual input and respond in natural language. Liu et al. <a href="https://arxiv.org/abs/2301.12597" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors underline decoration-2 decoration-pink-500/30 hover:decoration-pink-500">[2]</a> introduced BLIP-2, a pre-trained vision-language model that enables efficient multimodal understanding by combining frozen vision encoders with large language models (LLMs).
                   </p>
@@ -119,11 +119,11 @@ const IntroductionPage = () => {
               </div>
 
               {/* Navigation Systems Section */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+                <h3 className="text-2xl font-semibold mb-6 px-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                   Navigation Assistance Systems
                 </h3>
-                <div className="space-y-6 text-gray-300 leading-relaxed">
+                <div className="space-y-6 text-gray-300 leading-relaxed text-justify">
                   <p>
                     Research on assistive navigation has largely focused on GPS-based and computer vision-driven systems. Zhang et al. <a href="https://ieeexplore.ieee.org/document/9956561" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors underline decoration-2 decoration-pink-500/30 hover:decoration-pink-500">[4]</a> proposed a smartphone-based solution utilizing camera input for obstacle detection.
                   </p>
@@ -134,11 +134,11 @@ const IntroductionPage = () => {
               </div>
 
               {/* ATM Technologies Section */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+                <h3 className="text-2xl font-semibold mb-6 px-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                   ATM Accessibility Technologies
                 </h3>
-                <div className="space-y-6 text-gray-300 leading-relaxed">
+                <div className="space-y-6 text-gray-300 leading-relaxed text-justify">
                   <p>
                     Traditional ATM accessibility features include audio instructions and tactile indicators. Johnson et al. <a href="https://doi.org/10.1145/3373625.3416989" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors underline decoration-2 decoration-pink-500/30 hover:decoration-pink-500">[6]</a> employed computer vision to locate ATM buttons.
                   </p>
@@ -149,11 +149,11 @@ const IntroductionPage = () => {
               </div>
 
               {/* YOLO Section */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+                <h3 className="text-2xl font-semibold mb-6 px-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                   Object Detection with YOLOv8
                 </h3>
-                <div className="space-y-6 text-gray-300 leading-relaxed">
+                <div className="space-y-6 text-gray-300 leading-relaxed text-justify">
                   <p>
                     The YOLO (You Only Look Once) framework, particularly its latest iteration YOLOv8, has become a cornerstone of real-time object detection. Studies <a href="https://arxiv.org/abs/2305.09972" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors underline decoration-2 decoration-pink-500/30 hover:decoration-pink-500">[8]</a> confirm YOLOv8's high performance in speed and accuracy.
                   </p>
@@ -164,16 +164,16 @@ const IntroductionPage = () => {
 
           {/* Hypothesis and Research Questions Section */}
           <section className="mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-10 px-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Hypothesis and Research Questions
             </h2>
             <div className="space-y-8">
               {/* Hypothesis */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+                <h3 className="text-2xl font-semibold mb-6 px-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                   Research Hypothesis
                 </h3>
-                <div className="text-gray-300 leading-relaxed">
+                <div className="text-gray-300 leading-relaxed text-justify">
                   <p className="text-lg">
                     This project is guided by the hypothesis that a hybrid system combining task-specific computer vision models (YOLOv8, EasyOCR) with general-purpose Vision-Language Models (CogVLM, BLIP-2) can outperform standalone approaches in providing real-time, context-aware assistance for visually impaired individuals.
                   </p>
@@ -181,24 +181,24 @@ const IntroductionPage = () => {
               </div>
 
               {/* Research Questions */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-2xl font-semibold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+                <h3 className="text-2xl font-semibold mb-8 px-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                   Research Questions
                 </h3>
                 <div className="space-y-6 text-gray-300">
-                  <div className="p-6 border border-purple-400/20 rounded-lg hover:border-purple-400/40 transition-all duration-300 hover:bg-purple-400/5">
-                    <h4 className="text-xl font-medium mb-4 text-purple-300">Real-time VLM Deployment</h4>
-                    <p className="text-lg">Can VLMs be effectively deployed in real-time systems for assistive purposes without compromising reliability?</p>
+                  <div className="p-5 sm:p-6 border border-purple-400/20 rounded-lg hover:border-purple-400/40 transition-all duration-300 hover:bg-purple-400/5">
+                    <h4 className="text-xl font-medium mb-4 px-2 text-purple-300">Real-time VLM Deployment</h4>
+                    <p className="text-lg px-2">Can VLMs be effectively deployed in real-time systems for assistive purposes without compromising reliability?</p>
                   </div>
 
-                  <div className="p-6 border border-purple-400/20 rounded-lg hover:border-purple-400/40 transition-all duration-300 hover:bg-purple-400/5">
-                    <h4 className="text-xl font-medium mb-4 text-purple-300">Architectural Balance</h4>
-                    <p className="text-lg">What is the optimal architectural balance between general-purpose VLMs and specialized object detection models in assistive scenarios?</p>
+                  <div className="p-5 sm:p-6 border border-purple-400/20 rounded-lg hover:border-purple-400/40 transition-all duration-300 hover:bg-purple-400/5">
+                    <h4 className="text-xl font-medium mb-4 px-2 text-purple-300">Architectural Balance</h4>
+                    <p className="text-lg px-2">What is the optimal architectural balance between general-purpose VLMs and specialized object detection models in assistive scenarios?</p>
                   </div>
 
-                  <div className="p-6 border border-purple-400/20 rounded-lg hover:border-purple-400/40 transition-all duration-300 hover:bg-purple-400/5">
-                    <h4 className="text-xl font-medium mb-4 text-purple-300">Modular Design</h4>
-                    <p className="text-lg">How can such systems be modularly designed to adapt to multiple tasks (e.g., navigation, ATM usage) without performance degradation?</p>
+                  <div className="p-5 sm:p-6 border border-purple-400/20 rounded-lg hover:border-purple-400/40 transition-all duration-300 hover:bg-purple-400/5">
+                    <h4 className="text-xl font-medium mb-4 px-2 text-purple-300">Modular Design</h4>
+                    <p className="text-lg px-2">How can such systems be modularly designed to adapt to multiple tasks (e.g., navigation, ATM usage) without performance degradation?</p>
                   </div>
                 </div>
               </div>
@@ -207,17 +207,17 @@ const IntroductionPage = () => {
 
           {/* Proposed Solution Section */}
           <section className="mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-10 px-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Proposed Solution
             </h2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-              <p className="text-lg text-gray-300 leading-relaxed mb-8">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+              <p className="text-lg text-gray-300 leading-relaxed mb-8 text-justify">
                 Beyond Vision is a modular, multi-modal system that integrates real-time computer vision, OCR, and VLMs to assist visually impaired individuals with campus navigation and ATM usage.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="p-6 bg-purple-400/5 rounded-lg">
-                  <h4 className="text-xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Core Components</h4>
-                  <ul className="space-y-4 text-gray-300">
+                <div className="p-5 sm:p-6 bg-purple-400/5 rounded-lg">
+                  <h4 className="text-xl font-semibold mb-6 px-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Core Components</h4>
+                  <ul className="space-y-4 text-gray-300 px-2">
                     <li className="flex items-center space-x-3">
                       <span className="text-pink-400">•</span>
                       <span>Custom-trained YOLOv8 Models</span>
@@ -240,9 +240,9 @@ const IntroductionPage = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="p-6 bg-purple-400/5 rounded-lg">
-                  <h4 className="text-xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Key Features</h4>
-                  <ul className="space-y-4 text-gray-300">
+                <div className="p-5 sm:p-6 bg-purple-400/5 rounded-lg">
+                  <h4 className="text-xl font-semibold mb-6 px-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Key Features</h4>
+                  <ul className="space-y-4 text-gray-300 px-2">
                     <li className="flex items-center space-x-3">
                       <span className="text-pink-400">•</span>
                       <span>Real-time obstacle detection</span>
@@ -271,11 +271,11 @@ const IntroductionPage = () => {
 
           {/* References Section */}
           <section className="mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-10 px-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               References
             </h2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
-              <ol className="list-decimal list-inside space-y-4 text-gray-300">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-8 border border-purple-500/10 hover:border-purple-500/20 transition-colors">
+              <ol className="list-decimal list-inside space-y-4 text-gray-300 px-2">
                 {[
                   { href: "https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment", text: "World Health Organization - Blindness and Visual Impairment" },
                   { href: "https://arxiv.org/abs/2301.12597", text: "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models" },

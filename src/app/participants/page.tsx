@@ -12,7 +12,7 @@ const ParticipantsPage = () => {
       title1: "The Manager",
       title2: "Stylish Moral",
       image: "/images/participants/omer.JPEG",
-      thoughts: "[Your thoughts and perspective about the project, its challenges, and achievements will go here. This section should reflect your personal experience and insights gained throughout the development process.]",
+      thoughts: "This project is not only technically challenging but also emotionally profound. No matter how much we stretch our imagination, we can never truly simulate the life of a visually impaired person—and that's where our creativity reaches its limits. Yet, our technical solutions and the modularity of the project offer hope. Working on a unique project with a strong team helps you overcome certain obstacles. As long as harmony and effort continue, the project will stand strong. This project will remain a unique piece that we created as a team. The challenges will be overcome, and one day, it will come to life. Being one of the first to take such a step is a source of pride. I hope future generations continue this project and help it achieve its purpose.",
       linkedin: "https://www.linkedin.com/in/omerfarukhrt",
     },
     {
@@ -69,11 +69,10 @@ const ParticipantsPage = () => {
         <Navigation />
       </div>
 
-
-        {/* Advisor Section */}
+      {/* Advisor Section */}
       <div className="relative z-10 py-24">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white/5 rounded-xl p-8 backdrop-blur-sm border-2 border-amber-500/30">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4">
+          <div className="bg-white/5 rounded-xl p-5 sm:p-8 backdrop-blur-sm border-2 border-amber-500/30">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-48 h-48 relative rounded-xl overflow-hidden">
                 <Image
@@ -83,7 +82,7 @@ const ParticipantsPage = () => {
                   className="object-cover"
                 />
               </div>
-              <div>
+              <div className="text-center md:text-left">
                 <h2 className="text-3xl font-semibold text-white mb-2">
                   Assoc. Prof. Hacer Yalım Keleş
                 </h2>
@@ -102,12 +101,12 @@ const ParticipantsPage = () => {
         </div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 h-screen flex items-center">
+      {/* Desktop Content */}
+      <div className="relative z-10 h-screen hidden md:flex items-center">
         <div className="w-full h-[80vh] flex">
           {participants.map((participant, index) => (
             <div
-              key={index}
+              key={`desktop-${index}`}
               className="relative flex-1 h-full group transition-all duration-500 ease-in-out hover:flex-[2.5] overflow-hidden"
               style={{
                 clipPath: `polygon(
@@ -181,7 +180,57 @@ const ParticipantsPage = () => {
         </div>
       </div>
 
-      
+      {/* Mobile Content */}
+      <div className="relative z-10 md:hidden px-4 pb-16">
+        <div className="space-y-8">
+          {participants.map((participant, index) => (
+            <div
+              key={`mobile-${index}`}
+              className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-amber-500/30"
+            >
+              <div className="relative h-64 w-full">
+                <Image
+                  src={participant.image}
+                  alt={participant.name}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <h2 className="text-2xl font-bold text-white mb-1">
+                    {participant.name}
+                  </h2>
+                  <p className="text-amber-500 font-medium">
+                    {participant.role}
+                  </p>
+                </div>
+              </div>
+              
+              <div className="p-5">
+                <div className="space-y-3 mb-4">
+                  <p className="text-gray-200 italic">{participant.title1}</p>
+                  <p className="text-gray-200 italic">{participant.title2}</p>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 backdrop-blur-sm">
+                  <p className="text-gray-300 text-sm leading-relaxed text-justify">
+                    {participant.thoughts}
+                  </p>
+                </div>
+                <div className="pt-4">
+                  <Link
+                    href={participant.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-amber-500 hover:text-amber-400 transition-colors"
+                  >
+                    <FaLinkedin size={24} />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </main>
   );
 };

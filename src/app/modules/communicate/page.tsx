@@ -5,76 +5,76 @@ const CommunicatePage = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white pt-20 sm:pt-24 pb-12 sm:pb-16">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-green-500 via-teal-500 to-green-500 bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-green-500 via-teal-500 to-green-500 bg-clip-text text-transparent animate-gradient">
             Communicate Module: Visual Understanding & Response
           </h1>
 
           {/* Process Flow Section */}
-          <section className="mb-20">
-            <div className="grid grid-cols-1 gap-12">
+          <section className="mb-12 sm:mb-20">
+            <div className="grid grid-cols-1 gap-8 sm:gap-12">
               {/* Flow Diagram */}
-              <div className="relative h-[400px] w-full group mb-12">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-xl"></div>
+              <div className="relative h-[300px] sm:h-[400px] w-full group mb-8 sm:mb-12">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-lg sm:rounded-xl"></div>
                 <Image
                   src="/images/communicate-module.png"
                   alt="Communicate Module Process Flow"
                   fill
-                  className="object-contain p-4"
+                  className="object-contain p-3 sm:p-4"
                 />
               </div>
 
               {/* Process Steps */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                 {/* Camera Input */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-500/10 hover:border-green-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center mb-6">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-green-500/10 hover:border-green-500/20 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center mb-4 sm:mb-6">
+                    <svg className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-green-400">Camera Input</h3>
-                  <p className="text-gray-300">Real-time visual data capture through smart glasses or mobile device camera for continuous environmental monitoring.</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-green-400">Camera Input</h3>
+                  <p className="text-sm sm:text-base text-gray-300 max-w-prose">Real-time visual data capture through smart glasses or mobile device camera for continuous environmental monitoring.</p>
                 </div>
 
                 {/* Processing */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-teal-500/10 hover:border-teal-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-r from-teal-500 to-green-500 flex items-center justify-center mb-6">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-teal-500/10 hover:border-teal-500/20 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-to-r from-teal-500 to-green-500 flex items-center justify-center mb-4 sm:mb-6">
+                    <svg className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-teal-400">Visual Processing</h3>
-                  <p className="text-gray-300">Advanced image analysis using Visual Language Models (VLM) to understand scene context, objects, and text within the environment.</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-teal-400">Visual Processing</h3>
+                  <p className="text-sm sm:text-base text-gray-300 max-w-prose">Advanced image analysis using Visual Language Models (VLM) to understand scene context, objects, and text within the environment.</p>
                 </div>
 
                 {/* Response */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-500/10 hover:border-green-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center mb-6">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-green-500/10 hover:border-green-500/20 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center mb-4 sm:mb-6">
+                    <svg className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-green-400">Voice Response</h3>
-                  <p className="text-gray-300">Natural language responses converted to speech, providing clear and contextual information about the environment to the user.</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-green-400">Voice Response</h3>
+                  <p className="text-sm sm:text-base text-gray-300 max-w-prose">Natural language responses converted to speech, providing clear and contextual information about the environment to the user.</p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Features Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
+          <section className="mb-12 sm:mb-20">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
               Key Features & Capabilities
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-500/10">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-green-500/10">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
                   Environmental Understanding
                 </h3>
-                <ul className="space-y-4 text-gray-300">
+                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-300">
                   <li className="flex items-center space-x-3">
                     <span className="text-teal-400">•</span>
                     <span>Scene description and analysis</span>
@@ -94,11 +94,11 @@ const CommunicatePage = () => {
                 </ul>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-teal-500/10">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-teal-500/10">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
                   Interactive Features
                 </h3>
-                <ul className="space-y-4 text-gray-300">
+                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-300">
                   <li className="flex items-center space-x-3">
                     <span className="text-teal-400">•</span>
                     <span>Natural language queries</span>
@@ -122,14 +122,14 @@ const CommunicatePage = () => {
 
           {/* Technical Details */}
           <section>
-            <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
               Technical Implementation
             </h2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-500/10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-green-500/10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-6 text-green-400">Core Technologies</h3>
-                  <ul className="space-y-4 text-gray-300">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-green-400">Core Technologies</h3>
+                  <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-300">
                     <li className="flex items-center space-x-3">
                       <span className="text-teal-400">•</span>
                       <span>Visual Language Models (VLM)</span>
@@ -149,8 +149,8 @@ const CommunicatePage = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold mb-6 text-green-400">Performance Metrics</h3>
-                  <ul className="space-y-4 text-gray-300">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-green-400">Performance Metrics</h3>
+                  <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-300">
                     <li className="flex items-center space-x-3">
                       <span className="text-teal-400">•</span>
                       <span>Low latency response time</span>

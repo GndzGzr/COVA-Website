@@ -5,77 +5,77 @@ const AttentionPage = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white pt-20 sm:pt-24 pb-12 sm:pb-16">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-red-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-red-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient">
             Attention Module: Walking Assistance System
           </h1>
 
           {/* Process Flow Section */}
-          <section className="mb-20">
-            <div className="grid grid-cols-1 gap-12">
+          <section className="mb-12 sm:mb-20">
+            <div className="grid grid-cols-1 gap-8 sm:gap-12">
               {/* Flow Diagram */}
-              <div className="relative h-[400px] w-full group mb-12">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-xl"></div>
+              <div className="relative h-[300px] sm:h-[400px] w-full group mb-8 sm:mb-12">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-lg sm:rounded-xl"></div>
                 <Image
                   src="/images/attention-module.png"
                   alt="Attention Module Process Flow"
                   fill
-                  className="object-contain p-4"
+                  className="object-contain p-3 sm:p-4"
                 />
               </div>
 
               {/* Process Steps */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                 {/* Continuous Monitoring */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/10 hover:border-red-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center mb-6">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-red-500/10 hover:border-red-500/20 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center mb-4 sm:mb-6">
+                    <svg className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-red-400">Continuous Monitoring</h3>
-                  <p className="text-gray-300">Real-time environment scanning and obstacle detection using advanced computer vision.</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-red-400">Continuous Monitoring</h3>
+                  <p className="text-sm sm:text-base text-gray-300 max-w-prose">Real-time environment scanning and obstacle detection using advanced computer vision.</p>
                 </div>
 
                 {/* Threat Assessment */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-pink-500/10 hover:border-pink-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-r from-pink-500 to-red-500 flex items-center justify-center mb-6">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-pink-500/10 hover:border-pink-500/20 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-to-r from-pink-500 to-red-500 flex items-center justify-center mb-4 sm:mb-6">
+                    <svg className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-pink-400">Threat Assessment</h3>
-                  <p className="text-gray-300">Intelligent analysis of detected obstacles with distance calculation and risk evaluation.</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-pink-400">Threat Assessment</h3>
+                  <p className="text-sm sm:text-base text-gray-300 max-w-prose">Intelligent analysis of detected obstacles with distance calculation and risk evaluation.</p>
                 </div>
 
                 {/* Alert System */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/10 hover:border-red-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center mb-6">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-red-500/10 hover:border-red-500/20 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center mb-4 sm:mb-6">
+                    <svg className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.828-2.828" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-red-400">Alert System</h3>
-                  <p className="text-gray-300">Multi-level warning system with voice alerts and haptic feedback based on threat severity.</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-red-400">Alert System</h3>
+                  <p className="text-sm sm:text-base text-gray-300 max-w-prose">Multi-level warning system with voice alerts and haptic feedback based on threat severity.</p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Features Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
+          <section className="mb-12 sm:mb-20">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
               Key Features & Capabilities
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/10">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-red-500/10">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
                   Detection System
                 </h3>
-                <ul className="space-y-4 text-gray-300">
+                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-300">
                   <li className="flex items-center space-x-3">
                     <span className="text-pink-400">•</span>
                     <span>Real-time obstacle detection</span>
@@ -95,11 +95,11 @@ const AttentionPage = () => {
                 </ul>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-pink-500/10">
-                <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-pink-500/10">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
                   Warning System
                 </h3>
-                <ul className="space-y-4 text-gray-300">
+                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-300">
                   <li className="flex items-center space-x-3">
                     <span className="text-pink-400">•</span>
                     <span>Voice alerts with distance information</span>
@@ -123,14 +123,14 @@ const AttentionPage = () => {
 
           {/* Technical Details */}
           <section>
-            <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
               Technical Implementation
             </h2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-red-500/10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-6 text-red-400">Core Technologies</h3>
-                  <ul className="space-y-4 text-gray-300">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-red-400">Core Technologies</h3>
+                  <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-300">
                     <li className="flex items-center space-x-3">
                       <span className="text-pink-400">•</span>
                       <span>Custom-trained YOLOv8 Model</span>
@@ -150,8 +150,8 @@ const AttentionPage = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold mb-6 text-red-400">System Performance</h3>
-                  <ul className="space-y-4 text-gray-300">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-red-400">System Performance</h3>
+                  <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-300">
                     <li className="flex items-center space-x-3">
                       <span className="text-pink-400">•</span>
                       <span>Continuous monitoring every x seconds</span>

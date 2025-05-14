@@ -27,14 +27,14 @@ export default function Abstraction() {
       </div>
 
       {/* Content Section */}
-      <section className="relative z-10 min-h-screen w-full flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 snap-start" data-state="active">
+      <section className="relative z-10 min-h-screen w-full flex items-center justify-center py-16 sm:py-20 px-2 sm:px-4 md:px-6 lg:px-8 snap-start" data-state="active">
         <div className="max-w-4xl w-full">
-          <div className="bg-black/40 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12 text-white">
-            <h1 className="text-5xl font-bold mb-8 text-center bg-gradient-to-r from-amber-500 via-orange-400 via-30% via-red-400 via-60% via-rose-300 via-80% to-orange-200 text-transparent bg-clip-text animate-gradient">
+          <div className="bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-12 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-center bg-gradient-to-r from-amber-500 via-orange-400 via-30% via-red-400 via-60% via-rose-300 via-80% to-orange-200 text-transparent bg-clip-text animate-gradient">
               Beyond Vision: Empowering Visually Impaired Students
             </h1>
             
-            <div className="space-y-8 text-lg leading-relaxed">
+            <div className="space-y-6 sm:space-y-8 text-base sm:text-lg leading-relaxed max-w-prose mx-auto">
               <p className="text-gray-200">
                 This project focuses on increasing visually impaired students&apos; quality of life in two aspects: helping them navigate their campus safely and independently, and helping them complete their ATM operations without outside help. The field of assistive technology is developing rapidly however due to poor real-world performance and reliability concerns systems and projects integrating Visual-Language Models (VLMs) are limited. This project addresses these concerns and aim to prove that a system which is using VLMs to detect the worlds around users and give them reliable feedback.
               </p>
@@ -43,8 +43,8 @@ export default function Abstraction() {
                 In this study, we present a system designed to assist visually impaired individuals by responding to their needs through voice interaction and enabling seamless switching between two main modules: the ATM module and the Campus Navigation module. Additionally, the system allows users to utilize a Vision-Language Model (VLM) in a manner similar to a Large Language Model (LLM), enabling them to ask questions and receive informative responses.
               </p>
 
-              <div className="bg-amber-900/40 backdrop-blur-sm rounded-xl p-6 my-8 border border-amber-500/30">
-                <h2 className="text-2xl font-semibold text-amber-300 mb-4">
+              <div className="bg-amber-900/40 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 my-6 sm:my-8 border border-amber-500/30">
+                <h2 className="text-xl sm:text-2xl font-semibold text-amber-300 mb-3 sm:mb-4">
                   ATM Module
                 </h2>
                 <p className="text-amber-100">
@@ -52,8 +52,8 @@ export default function Abstraction() {
                 </p>
               </div>
 
-              <div className="bg-orange-900/40 backdrop-blur-sm rounded-xl p-6 my-8 border border-orange-500/30">
-                <h2 className="text-2xl font-semibold text-orange-300 mb-4">
+              <div className="bg-orange-900/40 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 my-6 sm:my-8 border border-orange-500/30">
+                <h2 className="text-xl sm:text-2xl font-semibold text-orange-300 mb-3 sm:mb-4">
                   Campus Navigation Module
                 </h2>
                 <p className="text-orange-100">
@@ -61,8 +61,8 @@ export default function Abstraction() {
                 </p>
               </div>
 
-              <div className="bg-rose-900/40 backdrop-blur-sm rounded-xl p-6 my-8 border border-rose-500/30">
-                <h2 className="text-2xl font-semibold text-rose-300 mb-4">
+              <div className="bg-rose-900/40 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 my-6 sm:my-8 border border-rose-500/30">
+                <h2 className="text-xl sm:text-2xl font-semibold text-rose-300 mb-3 sm:mb-4">
                   Vision-Language Model (VLM) Module
                 </h2>
                 <p className="text-rose-100">

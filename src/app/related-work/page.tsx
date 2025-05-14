@@ -101,56 +101,56 @@ const RelatedWorkPage = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-white mb-16 bg-gradient-to-r from-amber-500 via-orange-400 via-30% via-red-400 via-60% via-rose-300 via-80% to-orange-200 text-transparent bg-clip-text animate-gradient">
+      <div className="relative z-10 pt-20 sm:pt-24 pb-12 sm:pb-16">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-12 sm:mb-16 bg-gradient-to-r from-amber-500 via-orange-400 via-30% via-red-400 via-60% via-rose-300 via-80% to-orange-200 text-transparent bg-clip-text animate-gradient">
             Research from Literature
           </h1>
 
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {references.map((ref, index) => (
               <div
                 key={index}
                 className="group hover:bg-white/5 transition-colors duration-300 rounded-lg"
               >
-                <div className="border-t border-white/10 pt-8 px-4">
-                  <div className="flex flex-col md:flex-row gap-8">
+                <div className="border-t border-white/10 pt-6 sm:pt-8 px-3 sm:px-4">
+                  <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8">
                     {/* Left Column */}
                     <div className="w-full md:w-48 flex-shrink-0">
-                      <div className="text-sm text-gray-400">{ref.date}</div>
-                      <div className="mt-1 text-sm font-medium text-amber-500">{ref.category}</div>
+                      <div className="text-xs sm:text-sm text-gray-400">{ref.date}</div>
+                      <div className="mt-1 text-xs sm:text-sm font-medium text-amber-500">{ref.category}</div>
                     </div>
 
                     {/* Right Column */}
-                    <div className="flex-1 pb-6">
+                    <div className="flex-1 pb-4 sm:pb-6">
                       <Link 
                         href={ref.link}
                         className="block group-hover:text-amber-500 transition-colors duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <h2 className="text-2xl font-semibold text-white group-hover:text-amber-500 transition-colors duration-300">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-white group-hover:text-amber-500 transition-colors duration-300">
                           {ref.title}
                         </h2>
                       </Link>
 
-                      <div className="mt-2 text-base text-gray-300">
+                      <div className="mt-2 text-sm sm:text-base text-gray-300">
                         by {ref.authors}
                       </div>
 
-                      <p className="mt-4 text-base text-gray-300 leading-relaxed break-words">
+                      <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-300 leading-relaxed break-words max-w-prose">
                         {ref.description}
                       </p>
 
-                      <div className="mt-4">
+                      <div className="mt-3 sm:mt-4">
                         <Link
                           href={ref.link}
-                          className="inline-flex items-center text-sm font-medium text-amber-500 hover:text-amber-400 transition-colors duration-300"
+                          className="inline-flex items-center text-xs sm:text-sm font-medium text-amber-500 hover:text-amber-400 transition-colors duration-300"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Read Paper
-                          <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg className="ml-1 w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
                         </Link>

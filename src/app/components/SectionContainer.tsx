@@ -1,9 +1,13 @@
+import { useMediaQuery } from '../hooks/useMediaQuery';
+
 interface SectionContainerProps {
   children: React.ReactNode;
   className?: string;
 }
 
 const SectionContainer = ({ children, className = "" }: SectionContainerProps) => {
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+
   return (
     <section 
       className={`
@@ -12,21 +16,26 @@ const SectionContainer = ({ children, className = "" }: SectionContainerProps) =
         w-full 
         flex 
         items-center 
-        snap-start
-        snap-always
-        transition-all
-        duration-700
-        ease-in-out
+        ${isDesktop ? 'snap-start snap-always' : ''}
         opacity-0
         data-[state=active]:opacity-100
-        data-[direction=up]:animate-slideDown
-        data-[direction=down]:animate-slideUp
+        transition-opacity
+        duration-500
+        ease-in-out
+        py-12 md:py-16 lg:py-20
         ${className}
       `}
       data-state="inactive"
+      style={{
+        willChange: 'opacity',
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden'
+      }}
     >
-      <div className="container mx-auto px-4 py-20 transform transition-transform duration-700">
-        {children}
+      <div className="w-full mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+        <div className="backdrop-blur-[8px] bg-white/[0.02] rounded-xl md:rounded-2xl border border-white/[0.05] shadow-2xl p-4 md:p-6 lg:p-8 h-full">
+          {children}
+        </div>
       </div>
     </section>
   );

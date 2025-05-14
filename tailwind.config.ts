@@ -7,6 +7,14 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'xs': '375px',     // iPhone 11
+      'sm': '640px',     // Small tablets
+      'md': '834px',     // iPad 11"
+      'lg': '1024px',    // Larger tablets/small laptops
+      'xl': '1280px',    // Desktop
+      '2xl': '1536px',   // Large desktop
+    },
     extend: {
       fontFamily: {
         sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
